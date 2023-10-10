@@ -2,11 +2,10 @@ import {
   useLogin,
   useLogout,
   useAddToCart,
-  useSubtractToCart,
   useUser,
   useCartCount,
   StoreContextProvider,
-} from "./store-context";
+} from "./store-context-selector";
 
 const LoginSection = () => {
   const login = useLogin();
@@ -26,11 +25,9 @@ const UserSection = () => {
 
 const AddToCartSection = () => {
   const addToCart = useAddToCart();
-  const subtractToCart = useSubtractToCart();
   return (
     <>
       <button onClick={addToCart}>AddToCart</button>
-      <button onClick={subtractToCart}>subtractToCart</button>
     </>
   );
 };
@@ -40,7 +37,7 @@ const CartCountSection = () => {
   return <div>cartCount:{cartCount}</div>;
 };
 
-const ContextPage = () => {
+const ContextSelectorPage = () => {
   return (
     <div>
       <LoginSection />
@@ -51,12 +48,12 @@ const ContextPage = () => {
   );
 };
 
-const ContextPageWrapper = () => {
+const ContextSelectorPageWrapper = () => {
   return (
     <StoreContextProvider>
-      <ContextPage />
+      <ContextSelectorPage />
     </StoreContextProvider>
   );
 };
 
-export default ContextPageWrapper;
+export default ContextSelectorPageWrapper;

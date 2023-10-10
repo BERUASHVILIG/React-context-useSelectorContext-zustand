@@ -7,7 +7,10 @@ import "./App.css";
 // import ZustandPage from "./ecommerce/Ecommerce-zustand";
 
 // ecommerce context
-import ContextPageWrapper from "./ecommerce/Ecommerce-context";
+// import ContextPageWrapper from "./ecommerce/Ecommerce-context";
+
+// ecommerce context selector
+import ContextSelectorPageWrapper from "./ecommerce/Ecommerce-context-selector";
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
       {/* ecommerce zutand */}
       {/* <ZustandPage /> */}
       {/* ecommerce context */}
-      <ContextPageWrapper />
+      {/* <ContextPageWrapper /> */}
+      {/* ecommerce context selector */}
+      <ContextSelectorPageWrapper />
     </>
   );
 }
